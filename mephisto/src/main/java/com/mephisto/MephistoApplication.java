@@ -4,7 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.HttpStatus;
 
 @SpringBootApplication
 @Controller
@@ -15,8 +16,8 @@ public class MephistoApplication {
 	}
 
 	@GetMapping("/")
-	@ResponseBody
-	public String home() {
-		return "<h1>Welcome to Mephisto!</h1><p>You've found the hidden path!</p>";
+	public ResponseEntity<String> home() {
+		String message = "<h1>Welcome to Mephisto!</h1><p>You've found the hidden path!</p>";
+		return new ResponseEntity<>(message, HttpStatus.OK);
 	}
 }
