@@ -1,0 +1,13 @@
+/mephisto/target/
+/mephisto/.idea/
+/mephisto/.classpath
+/mephisto/.project
+/mephisto/.settings/
+/mephisto/.mvn/
+/mephisto/mvnw
+/mephisto/mvnw.cmd
+/mephisto/logs/
+/mephisto/*.log
+/mephisto/*.iml
+/mephisto/.DS_Store
+/.metadata/
