@@ -16,8 +16,9 @@ public class MephistoApplication {
 	}
 
 	@GetMapping("/")
-	public ResponseEntity<String> home() {
-		String message = "<h1>Welcome to Mephisto!</h1><p>You've found the hidden path!</p>";
+	public ResponseEntity<String> welcome() {
+		String message = "Welcome to the Mephisto API!";
 		return new ResponseEntity<>(message, HttpStatus.OK);
 	}
+
 }
