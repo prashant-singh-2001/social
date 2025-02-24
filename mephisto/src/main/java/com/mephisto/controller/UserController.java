@@ -15,11 +15,20 @@ public class UserController {
 
     @PostMapping("/register")
     public ResponseEntity<User> registerUser(@RequestBody User user) {
+        // Set default role if not provided
+        if (user.getRole() == null || user.getRole().isEmpty()) {
+            user.setRole("User");
+        }
         return userService.saveUser(user);
     }
 
     @GetMapping("/{username}")
     public ResponseEntity<User> getUserByUsername(@PathVariable String username) {
         return userService.findByUsername(username);
+    }
+
+    @PostMapping("/{username}/addFriend")
+    public ResponseEntity<User> addFriend(@PathVariable String username, @RequestBody String friendUsername) {
+        return userService.addFriend(username, friendUsername);
     }
 }
