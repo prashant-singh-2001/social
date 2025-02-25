@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
  * This class serves as the entry point for the Spring Boot application.
  * It also provides a simple welcome endpoint.
  * 
- * @author
+ * @author Prashant Singh
  *         on February 24, 2025.
  */
 @SpringBootApplication
